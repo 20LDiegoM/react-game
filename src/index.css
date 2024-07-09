@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 10px;
+}
+.header, .footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.clear {
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  color: #fff;
+  border: none;
+  padding: 0 30px;
+}
+
+.square {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  float: left;
+  font-size: 190px;
+  font-weight: bold;
+  line-height: 200px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer h6 {
+  color: #fff;
+  margin-bottom: 20px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .square {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 90px;
+  }
+}
+
+@media (max-width: 320px) {
+  .square {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 40px;
+  }
+
+  .clear {
+    padding: 0 8px;
+  }
+}
